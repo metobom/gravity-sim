@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Dec 23 19:26:59 2021
+# Process ID: 377834
+# Current directory: /home/m3/meto_ws/FPGA_projects/VGA_Gravity_project/VGA_Gravity_project.runs/impl_1
+# Command line: vivado -log gravity.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source gravity.tcl -notrace
+# Log file: /home/m3/meto_ws/FPGA_projects/VGA_Gravity_project/VGA_Gravity_project.runs/impl_1/gravity.vdi
+# Journal file: /home/m3/meto_ws/FPGA_projects/VGA_Gravity_project/VGA_Gravity_project.runs/impl_1/vivado.jou
+# Running On: m3, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 6, Host memory: 16644 MB
+#-----------------------------------------------------------
+source gravity.tcl -notrace

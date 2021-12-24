@@ -1,0 +1,88 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Thu Dec 23 19:27:27 2021
+| Host         : m3 running 64-bit Ubuntu 20.04.3 LTS
+| Command      : report_control_sets -verbose -file gravity_control_sets_placed.rpt
+| Design       : gravity
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    10 |
+|    Minimum number of control sets                        |    10 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    25 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    10 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     6 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              11 |           10 |
+| No           | No                    | Yes                    |              38 |           15 |
+| No           | Yes                   | No                     |              62 |           16 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              32 |           12 |
+| Yes          | Yes                   | No                     |              64 |           17 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+---------------------------------------------+------------------------------------+------------------+----------------+--------------+
+|     Clock Signal     |                Enable Signal                |          Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+---------------------------------------------+------------------------------------+------------------+----------------+--------------+
+|  CLK2HZ_reg_n_0_BUFG |                                             |                                    |                1 |              1 |         1.00 |
+|  CLK_BUFG            |                                             |                                    |                3 |              3 |         1.00 |
+|  CLK2HZ_reg_n_0_BUFG | x1[6]_i_2_n_0                               | debounce_spawn_button/SS[0]        |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG |                                             |                                    |                6 |              7 |         1.17 |
+|  CLK2HZ_reg_n_0_BUFG | x1_reg[31]_i_2_n_1                          | debounce_spawn_button/SR[0]        |                8 |             28 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG |                                             | CLK2HZ                             |                8 |             31 |         3.88 |
+|  CLK100MHZ_IBUF_BUFG |                                             | CLK25MHZ                           |                8 |             31 |         3.88 |
+|  CLK_BUFG            | DISPLAY/ycoord_0                            | Reset_IBUF                         |               12 |             32 |         2.67 |
+|  CLK_BUFG            | debounce_spawn_button/counter0_carry__2_n_2 | debounce_spawn_button/should_reset |                8 |             32 |         4.00 |
+|  CLK_BUFG            |                                             | Reset_IBUF                         |               15 |             38 |         2.53 |
++----------------------+---------------------------------------------+------------------------------------+------------------+----------------+--------------+
+
+
